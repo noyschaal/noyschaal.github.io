@@ -1,4 +1,4 @@
-// Journal 3.1.1
+// Readable 3.1.1
 // Variables
 // --------------------------------------------------
 
@@ -9,15 +9,15 @@
 
 @gray-darker:            lighten(#000, 13.5%); // #222
 @gray-dark:              lighten(#000, 20%);   // #333
-@gray:                   #777; // #555
-@gray-light:             lighten(#000, 60%);   // #999
+@gray:                   lighten(#000, 33.5%); // #555
+@gray-light:             lighten(#000, 70%);   // #999
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
-@brand-primary:         #EB6864;
-@brand-success:         #22B24C;
-@brand-info:            #369;
-@brand-warning:         #F5E625;
-@brand-danger:          #F57A00;
+@brand-primary:         #4582EC;
+@brand-success:         #3FAD46;
+@brand-info:            #5bc0de;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
 
 
 //== Scaffolding
@@ -27,25 +27,25 @@
 //** Background color for `<body>`.
 @body-bg:               #fff;
 //** Global text color on `<body>`.
-@text-color:            @gray;
+@text-color:            @gray-dark;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
 //** Link hover color set via `darken()` function.
-@link-hover-color:      darken(@link-color, 15%);
+@link-hover-color:      darken(@link-color, 20%);
 
 
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "News Cycle", "Arial Narrow Bold", sans-serif;
+@font-family-sans-serif:  "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-serif;
 
-@font-size-base:          15px;
+@font-size-base:          16px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
@@ -63,9 +63,9 @@
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    @font-family-sans-serif;
-@headings-font-weight:    700;
+@headings-font-weight:    bold;
 @headings-line-height:    1.1;
-@headings-color:          #000;
+@headings-color:          inherit;
 
 
 //-- Iconography
@@ -137,27 +137,27 @@
 
 @btn-font-weight:                normal;
 
-@btn-default-color:              #fff;
-@btn-default-bg:                 @gray-light;
-@btn-default-border:             @btn-default-bg;
+@btn-default-color:              @text-color;
+@btn-default-bg:                 #fff;
+@btn-default-border:             #ddd;
 
-@btn-primary-color:              @btn-default-color;
+@btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
 @btn-primary-border:             @btn-primary-bg;
 
-@btn-success-color:              @btn-default-color;
+@btn-success-color:              #fff;
 @btn-success-bg:                 @brand-success;
 @btn-success-border:             @btn-success-bg;
 
-@btn-info-color:                 @btn-default-color;
+@btn-info-color:                 #fff;
 @btn-info-bg:                    @brand-info;
 @btn-info-border:                @btn-info-bg;
 
-@btn-warning-color:              @btn-default-color;
+@btn-warning-color:              #fff;
 @btn-warning-bg:                 @brand-warning;
 @btn-warning-border:             @btn-warning-bg;
 
-@btn-danger-color:               @btn-default-color;
+@btn-danger-color:               #fff;
 @btn-danger-bg:                  @brand-danger;
 @btn-danger-border:              @btn-danger-bg;
 
@@ -176,7 +176,7 @@
 //** Text color for `<input>`s
 @input-color:                    @text-color;
 //** `<input>` border color
-@input-border:                   #ccc;
+@input-border:                   #ddd;
 //** `<input>` border radius
 @input-border-radius:            @border-radius-base;
 //** Border color for inputs on focus
@@ -326,30 +326,30 @@
 //##
 
 // Basics of a navbar
-@navbar-height:                    60px;
+@navbar-height:                    50px;
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       340px;
 
-@navbar-default-color:             #000;
-@navbar-default-bg:                #fff;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-color:             @text-color;
+@navbar-default-bg:                @body-bg;
+@navbar-default-border:            transparent;
 
 // Navbar links
-@navbar-default-link-color:                #000;
-@navbar-default-link-hover-color:          #000;
-@navbar-default-link-hover-bg:             darken(@navbar-default-bg, 6.5%);
-@navbar-default-link-active-color:         #000;
-@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
-@navbar-default-link-disabled-color:       #ccc;
+@navbar-default-link-color:                @link-color;
+@navbar-default-link-hover-color:          @link-color;
+@navbar-default-link-hover-bg:             transparent;
+@navbar-default-link-active-color:         @navbar-default-link-color;
+@navbar-default-link-active-bg:            transparent;
+@navbar-default-link-disabled-color:       #333;
 @navbar-default-link-disabled-bg:          transparent;
 
 // Navbar brand label
 @navbar-default-brand-color:               @navbar-default-link-color;
 @navbar-default-brand-hover-color:         @navbar-default-link-hover-color;
-@navbar-default-brand-hover-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle
 @navbar-default-toggle-hover-bg:           #ddd;
@@ -359,28 +359,28 @@
 
 // Inverted navbar
 // Reset inverted navbar basics
-@navbar-inverse-color:                      #fff;
-@navbar-inverse-bg:                         @brand-primary;
-@navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-color:                      @text-color;
+@navbar-inverse-bg:                         @body-bg;
+@navbar-inverse-border:                     transparent;
 
 // Inverted navbar links
-@navbar-inverse-link-color:                 #fff;
-@navbar-inverse-link-hover-color:           #fff;
-@navbar-inverse-link-hover-bg:              darken(@navbar-inverse-bg, 6.5%);
-@navbar-inverse-link-active-color:          #fff;
-@navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 6.5%);
-@navbar-inverse-link-disabled-color:        #444;
+@navbar-inverse-link-color:                 @text-color;
+@navbar-inverse-link-hover-color:           @text-color;
+@navbar-inverse-link-hover-bg:              transparent;
+@navbar-inverse-link-active-color:          @text-color;
+@navbar-inverse-link-active-bg:             transparent;
+@navbar-inverse-link-disabled-color:        #ccc;
 @navbar-inverse-link-disabled-bg:           transparent;
 
 // Inverted navbar brand label
 @navbar-inverse-brand-color:                @navbar-inverse-link-color;
-@navbar-inverse-brand-hover-color:          #fff;
-@navbar-inverse-brand-hover-bg:             darken(@navbar-inverse-bg, 6.5%);
+@navbar-inverse-brand-hover-color:          @navbar-inverse-link-hover-color;
+@navbar-inverse-brand-hover-bg:             transparent;
 
 // Inverted navbar toggle
-@navbar-inverse-toggle-hover-bg:            darken(@navbar-inverse-bg, 10%);
-@navbar-inverse-toggle-icon-bar-bg:         #fff;
-@navbar-inverse-toggle-border-color:        darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-toggle-hover-bg:            #ddd;
+@navbar-inverse-toggle-icon-bar-bg:         #ccc;
+@navbar-inverse-toggle-border-color:        #ddd;
 
 
 //== Navs
@@ -418,17 +418,17 @@
 //
 //##
 
-@pagination-color:                     @link-color;
+@pagination-color:                     @text-color;
 @pagination-bg:                        #fff;
 @pagination-border:                    #ddd;
 
-@pagination-hover-color:               @link-hover-color;
-@pagination-hover-bg:                  @gray-lighter;
-@pagination-hover-border:              #ddd;
+@pagination-hover-color:               #fff;
+@pagination-hover-bg:                  @brand-primary;
+@pagination-hover-border:              @brand-primary;
 
-@pagination-active-color:              @gray-light;
-@pagination-active-bg:                 #f5f5f5;
-@pagination-active-border:             #ddd;
+@pagination-active-color:              #fff;
+@pagination-active-bg:                 @brand-primary;
+@pagination-active-border:             @brand-primary;
 
 @pagination-disabled-color:            @gray-light;
 @pagination-disabled-bg:               #fff;
@@ -457,7 +457,7 @@
 
 @jumbotron-padding:              30px;
 @jumbotron-color:                inherit;
-@jumbotron-bg:                   @gray-lighter;
+@jumbotron-bg:                   darken(@body-bg, 3%);
 @jumbotron-heading-color:        inherit;
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
 
@@ -466,21 +466,21 @@
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-@state-success-text:             #468847;
+@state-success-text:             @brand-success;
 @state-success-bg:               #dff0d8;
-@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
+@state-success-border:           @brand-success;
 
-@state-info-text:                #3a87ad;
+@state-info-text:                @brand-info;
 @state-info-bg:                  #d9edf7;
-@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
+@state-info-border:              @brand-info;
 
-@state-warning-text:             #c09853;
+@state-warning-text:             @brand-warning;
 @state-warning-bg:               #fcf8e3;
-@state-warning-border:           darken(spin(@state-warning-bg, -10), 3%);
+@state-warning-border:           @brand-warning;
 
-@state-danger-text:              #b94a48;
+@state-danger-text:              @brand-danger;
 @state-danger-bg:                #f2dede;
-@state-danger-border:            darken(spin(@state-danger-bg, -10), 3%);
+@state-danger-border:            @brand-danger;
 
 
 //== Tooltips
@@ -594,20 +594,20 @@
 @alert-border-radius:         @border-radius-base;
 @alert-link-font-weight:      bold;
 
-@alert-success-bg:            @state-success-bg;
-@alert-success-text:          @state-success-text;
+@alert-success-bg:            @state-success-border;
+@alert-success-text:          #fff;
 @alert-success-border:        @state-success-border;
 
-@alert-info-bg:               @state-info-bg;
-@alert-info-text:             @state-info-text;
+@alert-info-bg:               @state-info-border;
+@alert-info-text:             #fff;
 @alert-info-border:           @state-info-border;
 
-@alert-warning-bg:            @state-warning-bg;
-@alert-warning-text:          @state-warning-text;
+@alert-warning-bg:            @state-warning-border;
+@alert-warning-text:          #fff;
 @alert-warning-border:        @state-warning-border;
 
-@alert-danger-bg:             @state-danger-bg;
-@alert-danger-text:           @state-danger-text;
+@alert-danger-bg:             @state-danger-border;
+@alert-danger-text:           #fff;
 @alert-danger-border:         @state-danger-border;
 
 
@@ -667,31 +667,31 @@
 
 //** Border color for elements within panels
 @panel-inner-border:          #ddd;
-@panel-footer-bg:             #f5f5f5;
+@panel-footer-bg:             #fff;
 
-@panel-default-text:          @text-color;
+@panel-default-text:          @gray-dark;
 @panel-default-border:        #ddd;
 @panel-default-heading-bg:    #f5f5f5;
 
 @panel-primary-text:          #fff;
-@panel-primary-border:        @brand-primary;
+@panel-primary-border:        transparent;
 @panel-primary-heading-bg:    @brand-primary;
 
 @panel-success-text:          @state-success-text;
-@panel-success-border:        @brand-success;
-@panel-success-heading-bg:    @brand-success;
+@panel-success-border:        transparent;
+@panel-success-heading-bg:    @state-success-border;
 
 @panel-info-text:             @state-info-text;
-@panel-info-border:           @brand-info;
-@panel-info-heading-bg:       @brand-info;
+@panel-info-border:           transparent;
+@panel-info-heading-bg:       @state-info-border;
 
 @panel-warning-text:          @state-warning-text;
-@panel-warning-border:        @brand-warning;
-@panel-warning-heading-bg:    @brand-warning;
+@panel-warning-border:        transparent;
+@panel-warning-heading-bg:    @state-warning-border;
 
 @panel-danger-text:           @state-danger-text;
-@panel-danger-border:         @brand-danger;
-@panel-danger-heading-bg:     @brand-danger;
+@panel-danger-border:         transparent;
+@panel-danger-heading-bg:     @state-danger-border;
 
 
 //== Thumbnails
@@ -717,7 +717,7 @@
 //
 //##
 
-@well-bg:                     #f5f5f5;
+@well-bg:                     darken(@body-bg, 3%);
 @well-border:                 darken(@well-bg, 7%);
 
 
@@ -728,7 +728,7 @@
 @badge-color:                 #fff;
 //** Linked badge text color on hover
 @badge-link-hover-color:      #fff;
-@badge-bg:                    @link-color;
+@badge-bg:                    @brand-primary;
 
 //** Badge text color in active nav link
 @badge-active-color:          @link-color;
@@ -809,11 +809,11 @@
 //** Headings small color
 @headings-small-color:        @gray-light;
 //** Blockquote small color
-@blockquote-small-color:      @gray-light;
+@blockquote-small-color:      @text-color;
 //** Blockquote font size
 @blockquote-font-size:        (@font-size-base * 1.25);
 //** Blockquote border color
-@blockquote-border-color:     @gray-lighter;
+@blockquote-border-color:     @brand-primary;
 //** Page header border color
 @page-header-border-color:    @gray-lighter;
 
