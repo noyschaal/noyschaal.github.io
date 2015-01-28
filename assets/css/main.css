@@ -9,14 +9,21 @@
 
 body {
   	background-color: #f2f2f2;
-    font-family: "Lato";
+    font-family: "Cambria";
     font-weight: 300;
     font-size: 16px;
     color: #555;
     padding-top: 80px;
     
-	background-image: url(../img/back.png);
-
+	/*background-color:#3756AF;*/
+	background-image: url(../img/back.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     
   }
   
